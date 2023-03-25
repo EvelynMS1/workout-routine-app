@@ -1,0 +1,48 @@
+/* will probably want to add styling to the body, look for grid documentation in BULMA */
+
+/* can add styling to the workout form for placement, colors, style etc */
+#workout-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* feel free to add classes in html or css for the checkbox inputs. There may be card style input boxes or other styled options */
+
+/* will need styling placement, colors etc. 2/3 right hand side of page */
+#workout-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-left: 800px;
+}
+
+/* add styling to the clear saved workouts button. Bulma classes can help */
+.clr-btn {
+  display: flex;
+  flex-direction: column;
+}
+
+/* feel free to add the same styling that you use for clear button for the favorites and hide favorites buttons, as well as the save button and get workouts submit button. Maybe different colors but same style */
+
+/* can add styling to h2, h3 titles and even make styling for the p tags that are created */
+h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+/* can add styling for the placement here as well. 1/3 left hand side of page */
+.favorites {
+  display: flex;
+  flex-direction: column;
+  margin-right: 1200px;
+}
+
+/* will need styling for the created exerciseEL cards. Can add the styling class on lines 49 and 126 of javascript file for the created cards */

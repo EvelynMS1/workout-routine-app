@@ -1,12 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html>
+  <head>
+    <title>Workout App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
+  </head>
+  <body>
+    <form id="workout-form">
+      <label>
+        <input type="checkbox" name="muscle-group" value= "chest"> Chest
+      </label>
+      <label>
+        <input type="checkbox" name="muscle-group" value= "back"> Back
+      </label>
+      <label>
+        <input type="checkbox" name="muscle-group" value= "cardio"> Cardio
+      </label>
+      <label>
+        <input type="checkbox" name="muscle-group" value= "lower%20arms"> Lower Arms
+      </label>
+      <label>
+        <input type="checkbox" name="muscle-group" value= "lower%20legs"> Lower Legs
+      </label> 
+      <label>
+        <input type="checkbox" name="muscle-group" value= "shoulders"> Shoulders
+      </label>
+      <label>
+        <input type="checkbox" name="muscle-group" value= "upper%20arms"> Upper Arms
+      </label>
+      <label>
+        <input type="checkbox" name="muscle-group" value= "upper%20legs"> Upper Legs
+      </label>
+      <label>
+        <input type="checkbox" name="muscle-group" value= "waist"> Waist
+      </label>
+      <button id="search" type="submit">Get Workouts</button>
+    </form>
+
+    <div class="favorites">
+    </div>
+
+    <button class="favorites-btn">Favorites</button>
+    <button class="hide-favorites-btn" style="display: none">Hide Favorites</button>
+
+
+    <div id="workout-container"></div>
+
+    <button class="clr-btn">Clear Saved Workouts</button>
+
+    <script src="./assets/script.js"></script>
+  </body>
 </html>
