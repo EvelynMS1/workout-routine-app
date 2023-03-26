@@ -57,8 +57,8 @@ document
           // can include BULMA styling to the save button by adding class. Look for buttons in the BULMA documentation. use button-is-primary
           exerciseEl.innerHTML = `
             <h2>${exercise.name}</h2>
-            <p>${exercise.target}</p>
-            <p>${exercise.equipment}</p>
+            <p>target muscle: ${exercise.target}</p>
+            <p>equipment: ${exercise.equipment}</p>
 
             <div class="gif-container">
               <button class="button is-primary" id="save-btn">Save</button>
@@ -127,8 +127,8 @@ favoritesBtn.addEventListener("click", function () {
     exerciseEl.classList.add("exercise-card");
     exerciseEl.innerHTML = `
       <h3>${exercise.name}</h3>
-      <p>${exercise.target}</p>
-      <p>${exercise.equipment}</p>
+      <p>target muscle: ${exercise.target}</p>
+      <p>equipment: ${exercise.equipment}</p>
       <div class="favorites-gif-container">
         <img src="${exercise.gifUrl}" alt="${exercise.name}" />
         <style>
@@ -172,4 +172,6 @@ const clrBtn = document.querySelector(".clr-btn");
 clrBtn.addEventListener("click", function () {
   localStorage.clear();
   savedContainer.innerHTML = "";
+  favoritesBtn.style.display = "block";
+  hideFavoritesBtn.style.display = "none";
 });
