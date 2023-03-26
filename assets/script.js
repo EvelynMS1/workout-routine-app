@@ -61,7 +61,7 @@ document
             <p>${exercise.equipment}</p>
 
             <div class="gif-container">
-              <button class="save-btn">Save</button>
+              <button class="button is-primary" id="save-btn">Save</button>
               <img src="${exercise.gifUrl}" alt="${exercise.name}" />
               <style>
               .gif-container {
@@ -70,6 +70,7 @@ document
               </style>
             </div>
             `;
+
 
           // event listener that displays gif-container to diplay block when the h2 element is clicked and to
           exerciseEl.querySelector("h2").addEventListener("click", function () {
@@ -85,7 +86,7 @@ document
 
           // function that saves the exercise to local storage when the save-btn is clicked and pushes the exercise to the savedExercises array
           exerciseEl
-            .querySelector(".save-btn")
+            .querySelector("#save-btn")
             .addEventListener("click", function () {
               const savedExercises =
                 JSON.parse(localStorage.getItem("savedExercises")) || [];
