@@ -1,4 +1,8 @@
 /* will probably want to add styling to the body, look for grid documentation in BULMA */
+body {
+  max-height: 1vw;
+  max-width: 100vw;
+}
 
 /* can add styling to the workout form for placement, colors, style etc */
 #workout-form {
@@ -15,7 +19,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  margin-left: 800px;
+  margin-left: 2vw;
+  margin-top: 30px;
 }
 
 /* add styling to the clear saved workouts button. Bulma classes can help */
@@ -37,12 +42,48 @@ h3 {
   font-weight: bold;
 }
 
-
 /* can add styling for the placement here as well. 1/3 left hand side of page */
 .favorites {
   display: flex;
   flex-direction: column;
   margin-right: 1200px;
+  background-color: #3474af59;
 }
 
-/* will need styling for the created exerciseEL cards. Can add the styling class on lines 49 and 126 of javascript file for the created cards */
+/* will need styling for the created exerciseEL cards. Can add the styling class on lines 49 and 126 of javascript file for exercisedb api call */
+
+.exercise-card {
+  width: 300px;
+  height: 500px;
+  background-color: #3474af59;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.exercise-card .card-image img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.exercise-card .card-content {
+  padding: 20px;
+  height: 100%;
+}
+
+.exercise-card h3 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.exercise-card p {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.exercise-card .button.is-danger {
+  margin-top: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

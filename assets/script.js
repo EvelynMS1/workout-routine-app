@@ -46,7 +46,7 @@ document
           const exercise = data[i];
           const exerciseEl = document.createElement("div");
           // add styling class from BULMA to the exerciseEl. Look for cards in the BULMA documentation
-          exerciseEl.classList.add("exercise");
+          exerciseEl.classList.add("exercise-card");
 
           // limit the number of exercises to 8
           if (i > 7) {
@@ -54,19 +54,20 @@ document
           }
 
           // include the name, target, equipment and button that will display a gifURL as hiddan of the exercise
+          // can include BULMA styling to the save button by adding class. Look for buttons in the BULMA documentation. use button-is-primary
           exerciseEl.innerHTML = `
             <h2>${exercise.name}</h2>
             <p>${exercise.target}</p>
             <p>${exercise.equipment}</p>
 
             <div class="gif-container">
+              <button class="save-btn">Save</button>
               <img src="${exercise.gifUrl}" alt="${exercise.name}" />
               <style>
               .gif-container {
                 display: none;
               }
               </style>
-              <button class="save-btn">Save</button>
             </div>
             `;
 
@@ -122,7 +123,7 @@ favoritesBtn.addEventListener("click", function () {
   savedExercises.forEach(function (exercise) {
     const exerciseEl = document.createElement("div");
     // add class styling from BULMA to the exerciseEl. Look for cards in the BULMA documentation
-    exerciseEl.classList.add("exercise");
+    exerciseEl.classList.add("exercise-card");
     exerciseEl.innerHTML = `
       <h3>${exercise.name}</h3>
       <p>${exercise.target}</p>
