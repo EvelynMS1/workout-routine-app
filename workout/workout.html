@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Workout App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="./wourkout.css" />
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+        <h1 class="title">Workout Generator</h1>
+        <form id="workout-form">
+          <div class="field">
+            <label class="label">Muscle Group</label>
+            <div class="control">
+              <label class="checkbox">
+                <input type="checkbox" name="muscle-group" value="chest" />
+                Chest
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="muscle-group" value="back" />
+                Back
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="muscle-group" value="cardio" />
+                Cardio
+              </label>
+              <label class="checkbox">
+                <input
+                  type="checkbox"
+                  name="muscle-group"
+                  value="lower%20arms"
+                />
+                Lower Arms
+              </label>
+              <label class="checkbox">
+                <input
+                  type="checkbox"
+                  name="muscle-group"
+                  value="lower%20legs"
+                />
+                Lower Legs
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="muscle-group" value="shoulders" />
+                Shoulders
+              </label>
+              <label class="checkbox">
+                <input
+                  type="checkbox"
+                  name="muscle-group"
+                  value="upper%20arms"
+                />
+                Upper Arms
+              </label>
+              <label class="checkbox">
+                <input
+                  type="checkbox"
+                  name="muscle-group"
+                  value="upper%20legs"
+                />
+                Upper Legs
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="muscle-group" value="waist" />
+                Waist
+              </label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <button id="search" class="button is-primary" type="submit">
+                Get Workouts
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <div class="columns">
+          <div class="column is-one-third">
+            <h2 class="subtitle">Favorites</h2>
+            <div class="favorites"></div>
+            <button class="favorites-btn button is-primary">Favorites</button>
+            <button
+              class="hide-favorites-btn button is-danger"
+              style="display: none"
+            >
+              Hide Favorites
+            </button>
+            <button class="clr-btn button is-danger">
+              Clear Saved Workouts
+            </button>
+          </div>
+          <div class="column is-two-thirds">
+            <h2 class="subtitle">Workouts</h2>
+            <div id="workout-container" class="columns is-multiline"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./workout.js"></script>
+  </body>
+</html>
