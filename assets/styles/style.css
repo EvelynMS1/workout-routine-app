@@ -41,7 +41,7 @@ body {
 }
 .nav {
   display: block;
-  background-color: rgb(188, 185, 181);
+  background-color: orangered;
   border-radius: 20px;
   margin-right: 30%;
   margin-left: 30%;
@@ -98,7 +98,7 @@ body {
   }
 
   .nav {
-    background-color: #555;
+    background-color: orangered;
     color: #fff;
     text-align: center;
     padding: 10px;
