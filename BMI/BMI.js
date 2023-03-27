@@ -12,6 +12,7 @@ var weightCategory;
 var calorie;
 var age;
 var weightType;
+var healthy_bmi_range;
 var options = {
   method: "GET",
   headers: {
@@ -62,7 +63,8 @@ var getBMI = function (age, weight, height) {
         return response.json().then((bmidata) => {
           console.log(bmidata.data.bmi);
           BMI = bmidata.data.bmi;
-          weightType = bmidata.data.health
+          weightType = bmidata.data.health;
+          healthy_bmi_range = bmidata.data. healthy_bmi_range;
           return BMI;
         });
       } else {
@@ -166,6 +168,15 @@ var showWeightDetails = function (BMI, calorie, weightType) {
     var weightTypePara = document.createElement("p");
     weightTypePara.innerHTML = "<strong>Health:</strong> <span id='weightType'>" + weightType + "</span>";
     content.appendChild(weightTypePara);
+
+    var BMIRangePara = document.createElement("p");
+    BMIRangePara.innerHTML = "<strong>Healthy BMI Range:</strong> <span id='Healthy BMI Range'>" + healthy_bmi_range + "</span>";
+    content.appendChild(BMIRangePara);
+
+    // var img = document.createElement("img");
+    // img.src = "./BMI/img.png"; 
+    // img.alt = "count calories"; 
+    // content.appendChild(img);
 
     // Show the modal
     container.classList.add("is-active");
