@@ -4,6 +4,8 @@ body {
     background-color: black;
     color:white;
     align-items: center;
+    overflow-y: hidden;
+
   }
   
   /* Style the header */
@@ -98,11 +100,13 @@ body {
   }
   
   .container {
-    background-color: #f9f9f9;
+    background-color:white;
     /* border: 1px solid #ccc; */
     border-radius: 5px;
     padding: 20px;
     margin-top: 20px;
+    overflow-y: hidden;
+
   }
   
   .container h2 {
@@ -123,4 +127,6 @@ body {
     font-weight: bold;
     color: green;
   }
-  
+  a .h2{
+    font-weight: bold;
+  }

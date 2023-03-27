@@ -117,19 +117,58 @@ var getBMI = function (age, weight, height) {
       });
 };
 
-var showWeightDetails = function (BMI, calorie, weightType) {
-    var bmiSpan = document.getElementById("bmi");
-    var calorieSpan = document.getElementById("calorie");
-    var weightCategory = document.getElementById("weightType")
-    bmiSpan.innerHTML = BMI;
-    calorieSpan.innerHTML = calorie;
-    weightCategory.innerHTML= weightType;
+// var showWeightDetails = function (BMI, calorie, weightType) {
+//     var bmiSpan = document.getElementById("bmi");
+//     var calorieSpan = document.getElementById("calorie");
+//     var weightCategory = document.getElementById("weightType")
+//     bmiSpan.innerHTML = BMI;
+//     calorieSpan.innerHTML = calorie;
+//     weightCategory.innerHTML= weightType;
   
-    // Show the modal
+//     // Show the modal
+//     var container = document.querySelector(".container");
+//     container.classList.add("is-active");
+
+//   };
+var showWeightDetails = function (BMI, calorie, weightType) {
     var container = document.querySelector(".container");
+    container.innerHTML = "";
+
+    var columns = document.createElement("div");
+    columns.className = "columns is-centered";
+    container.appendChild(columns);
+
+    var column = document.createElement("div");
+    column.className = "column is-half";
+    columns.appendChild(column);
+
+    var box = document.createElement("div");
+    box.className = "box";
+    column.appendChild(box);
+
+    var title = document.createElement("h3");
+    title.className = "title";
+    title.textContent = "Your Results";
+    box.appendChild(title);
+
+    var content = document.createElement("div");
+    content.className = "content";
+    box.appendChild(content);
+
+    var bmiPara = document.createElement("p");
+    bmiPara.innerHTML = "<strong>BMI:</strong> <span id='bmi'>" + BMI + "</span>";
+    content.appendChild(bmiPara);
+
+    var caloriePara = document.createElement("p");
+    caloriePara.innerHTML = "<strong>Calorie Intake:</strong> <span id='calorie'>" + calorie + "</span>";
+    content.appendChild(caloriePara);
+
+    var weightTypePara = document.createElement("p");
+    weightTypePara.innerHTML = "<strong>Health:</strong> <span id='weightType'>" + weightType + "</span>";
+    content.appendChild(weightTypePara);
+
+    // Show the modal
     container.classList.add("is-active");
-
-  };
-
+};
 // Add submit event to form
 button.addEventListener("click", formSubmitHandler);
