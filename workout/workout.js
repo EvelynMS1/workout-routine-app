@@ -1,5 +1,5 @@
 // global variables
-const apiKey = "e60181779bmsh462e2f0d660fcb9p1dd608jsnba604de95f99";
+const apiKey = "ede6fe74f5msh39ffaeffc65acb7p10765djsna172c41ba859";
 const apiUrl = "https://exercisedb.p.rapidapi.com/exercises/bodyPart/";
 const workoutContainer = document.getElementById("workout-container");
 
