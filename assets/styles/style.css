@@ -1,0 +1,107 @@
+/* CSS reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.link {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 10px;
+}
+.link:hover {
+  opacity: 0.7;
+}
+.progress {
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+.header {
+  background-color: rgb(131, 120, 106);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+.nav {
+  display: block;
+  background-color: orangered;
+  border-radius: 20px;
+  margin-right: 30%;
+  margin-left: 30%;
+  margin-top: 10px;
+}
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {
+  margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: icon;
+  display: flex;
+  margin-left: auto;
+}
+
+/* Style the counter cards */
+.card {
+  display: flex;
+  flex-direction: column;
+  border: solid 2px black;
+  padding: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 15%;
+  height: 33%vh;
+  margin: 2rem auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.card image {
+  flex-grow: 1;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  .nav {
+    background-color: orangered;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10%;
+  }
+}

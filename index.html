@@ -1,129 +1,112 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Fitness Calculator</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitness Web App</title>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css"
-
+      type="text/css"
+      href="./assets/styles/style.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <link rel="stylesheet" href="./style.css" />
-    <a href="./index.html" class="button is-primary"><h2>Fitness Calculator</h2></a>
-
   </head>
-  <body>
-    <div class="bg-img">
 
+  <body>
+    <div class="header">
+      <h1 class="animate__animated animate__bounce">
+        Welcome to our Fitness Web App
+      </h1>
+      <p>
+        OUR FITNESS WEB APP PROVIDES YOU WITH A VARIETY OF WORKOUTS,NUTRITION PLANS, AND TOOLS TO HELP YOU 
+       
+        <a class="progress" href="./BMI/BMI.html">TRACK YOUR PROGRESS</a>
+        <p>
+        </p>
+        <a class="progress" href="./Solid/index.html">Quick Read</a>
+
+      </p>
     </div>
-    <section class="section">
-      <div class="container">
-        <!-- <h1 class="title">Fitness Calculator</h1> -->
-        <form>
-            <div class="field">
-                <label class="label" for="Age">Age</label>
-                <div class="control">
-                  <input
-                    class="input"
-                    type="number"
-                    id="age"
-                    name="age"
-                    required
-                  />
-                </div>
-              </div>
-          <div class="field">
-            <label class="label" for="weight">Weight (in Pounds):</label>
-            <div class="control">
-              <input
-                class="input"
-                type="number"
-                id="weight"
-                name="weight"
-                required
-              />
-            </div>
-          </div>
-          <div class="field is-grouped">
-            <div class="control">
-              <label class="label">Height:</label>
-            </div>
-            <div class="control">
-              <input class="input" type="number" id="feet" placeholder="Feet" required>
-            </div>
-            <div class="control">
-              <input class="input" type="number" id="inches" placeholder="Inches" required>
-            </div>
-          </div>
-          <div class="field">
-            <label class="label" for="gender">Gender</label>
-            <div class="control">
-            <div class="select"> 
-                <select  id="gender" name="gender" >
-                    <option value="male">male</option>
-                    <option value="female">female</option>
-                </select>
-            </div>
-            </div>
-          </div>
-          <div class="field">
-            <label class="label" for="activitylevel">Activity Level:</label>
-            <div class="control">
-              <div class="select">
-                <select id="activitylevel" name="activitylevel">
-                  <option value="1">Sedentary: little or no exercise</option>
-                  <option value="2">Exercise 1-3 times/week</option>
-                  <option value="3">Exercise 4-5 times/week</option>
-                  <option value="4">Daily exercise or intense exercise 3-4 times/week</option>
-                  <option value="5">Intense exercise 6-7 times/week</option>
-                  <option value="6">Very intense exercise daily, or physical job</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <div class="field">
-            <label class="label" for="goal">Weight Goal:</label>
-            <div class="control">
-              <div class="select">
-                <select id="weightgoal" name="goal">
-                  <option value="maintain">Maintain weight</option>
-                  <option value="mildlose">Mild weight loss</option>
-                  <option value="weightlose">Weight loss</option>
-                  <option value="extremelose">Extreme weight loss</option>
-                  <option value="mildgain">Mild weight gain</option>
-                  <option value="weightgain">Weight gain</option>
-                  <option value="extremegain">Extreme weight gain</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <br>  
-          <div class="field">
-            <div class="control">
-              <button class="button is-primary" id="button">
-                Calculate
-              </button>
-            </div>
-          </div>
-          <div class="container">
-            <div class="columns is-centered">
-              <div class="column is-half">
-                <!-- <div class="box"> -->
-                  <!-- <h3 class="title">Your Results</h3> -->
-                  <!-- <div class="content">
-                    <p><strong>BMI:</strong> <span id="bmi"></span></p>
-                    <p><strong>Calorie Intake:</strong> <span id="calorie"></span></p>
-                    <p><strong>Health:</strong> <span id="weightType"></span></p> -->
-                  <!-- </div> -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </form>
+    <div class="nav">
+      <h1>DON'T STOP WHEN YOU'RE TIRED, STOP WHEN YOU'RE DONE.</h1>
+    </div>
+    <div class="wrap">
+      <div class="card">
+        <img src="./assets/images/chest.jpeg" alt="chest" style="width: 100%" value="Chest"/>  
+        <h1>Chest</h1>
+        <p class="Chest"></p>
+        <a class="link" href="./workout/workout.html">Train</a>
       </div>
-    </section>
-    
-    <script src="./app.js"></script>
+      
+      <div class="card">
+        <img src="./assets/images/neck.webp" alt="Neck" style="width: 100%" value="Neck"/>
+        <h1>Neck</h1>
+        <p class="Neck"></p>
+        <a class="link" href="./workout/workout.html">Train</a>
+      </div>
+
+      <div class="card">
+        <img src="./assets/images/Abs.jpeg" alt="Abs" style="width: 100%" value="Abs"/>
+        <h1>Abs</h1>
+        <p class="Abs"></p>
+        <a class="link" href="./workout/workout.html">Train</a>
+      </div>
+
+      <div class="card">
+        <img  src="./assets/images/Bicep-muscle.png" alt="Bicep" style="width: 100%" value="Bicep"/>
+        <h1>Bicep</h1>
+        <p class="Bicep"></p>
+        <a class="link" href="./workout/workout.html">Train</a>
+      </div>
+
+      <div class="card">
+        <img src="./assets/images/quadriceps.webp"  alt="quadriceps"   style="width: 100%" value="quadriceps"/>
+        <h1>quadriceps</h1>
+        <p class="quadriceps"></p>
+        <a class="link" href="./workout/workout.html">Train</a>
+      </div>
+
+      <div class="card">
+        <img src="./assets/images/Hamstrings.jpg"  alt="Hamstrings" style="width: 100%" value="Hamstrings"/>
+        <h1>Hamstrings</h1>
+        <p class="Hamstrings"></p>
+        <a class="link" href="./workout/workout.html">Train</a>
+      </div>
+
+      <div class="card">
+        <img src="./assets/images/Triceps.webp" alt="Triceps" style="width: 100%"  value="Triceps"/>
+        <h1>Triceps</h1>
+        <p class="Triceps"></p>
+        <a class="link" href="./workout/workout.html">Train</a>
+      </div>
+
+      <div class="card">
+        <img src="./assets/images/Lower back 2.jpg" alt="Lower back" style="width: 100%" value="Lowerback"/>
+        <h1>Lowerback</h1>
+        <p class="Abs"></p>
+        <a class="link" href="./workout/workout.html">Train</a>
+      </div>
+
+      <div class="card">
+        <img src="./assets/images/Upperback.jpeg" alt="Upperback" style="width: 100%" value="Upperback"/>
+        <h1>Upperback</h1>
+        <p class="Upperback"></p>
+        <a class="link" href="./workout/workout.html">Train</a>
+      </div>
+
+      <div class="card">
+        <img
+          src="./assets/images/Shoulders.webp" alt="Shoulders" style="width: 100%" value="Shoulders"/>
+        <h1>Shoulders</h1>
+        <p class="Shoulders"></p>
+        <a class="link" href="./workout/workout.html">Train</a>
+      </div>
+
+      <div class="card">
+        <img src="./assets/images/Traps.jpeg" alt="Traps" style="width: 100%" value="Traps"/>
+        <h1>Traps</h1>
+        <p class="Traps"></p>
+        <a class="link" href="./workout/workout.html">Train</a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
