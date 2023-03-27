@@ -3,17 +3,8 @@
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 20px;
-  display: block;
-  border: none;
-  outline: 0;
-  padding: 12px;
-  color: rgb(12, 17, 14);
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-  border-radius: 10px;
 }
+
 #workout-container {
   display: flex;
   flex-wrap: wrap;
@@ -21,35 +12,12 @@
   margin-left: 2vw;
   margin-top: 30px;
 }
-header {
-  display: block;
-  border: none;
-  padding: 0%;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: large;
-  border-radius: 10px;
-  background-image: url(./fitness.jpg);
-}
-.subtitle {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  border: solid 2px black;
-  padding: 5px;
-  box-shadow: 0 4px 8px 0 rgba(111, 32, 32, 0.2);
-  width: 25%;
-  height: 33%vh;
-  margin: 2rem auto;
-}
+
 .clr-btn {
   display: flex;
   flex-direction: column;
 }
-h1 {
-  text-align: center;
-}
+
 h2 {
   font-size: 30px;
   font-weight: bold;
@@ -64,33 +32,15 @@ h3 {
   display: flex;
   flex-direction: column;
   margin-right: 1200px;
-  background-color: #15559159;
+  background-color: #3474af59;
 }
-.label {
-  color: rgb(1, 12, 1);
-  text-decoration: underline;
-}
-.title {
-  color: rgb(152, 95, 21);
-  text-decoration: underline;
-}
+
 .exercise-card {
   width: 300px;
   height: 500px;
-  background-color: #808d9859;
+  background-color: #3474af59;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  display: block;
-  border: none;
-  outline: 0;
-  padding: 12px;
-  color: white;
-  background-color: rgb(60, 9, 9);
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-  border-radius: 10px;
 }
 
 .exercise-card .card-image img {
@@ -119,34 +69,30 @@ h3 {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
 }
+
 
 /* css for different viewports */
 @media screen and (max-width: 768px) {
-  .exercise-card,
-  .favorites {
+  .exercise-card, .favorites {
     width: 100%;
   }
 }
 
 @media screen and (max-width: 1024px) {
-  .exercise-card,
-  .favorites {
+  .exercise-card, .favorites {
     width: 100%;
   }
 }
 
 @media screen and (max-width: 1280px) {
-  .exercise-card,
-  .favorites {
+  .exercise-card, .favorites {
     width: 100%;
   }
 }
 
 @media screen and (max-width: 1440px) {
-  .exercise-card,
-  .favorites {
+  .exercise-card, .favorites {
     width: 100%;
   }
 }
