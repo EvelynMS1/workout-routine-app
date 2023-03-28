@@ -1,0 +1,132 @@
+/* Set default font and background color for the page */
+body {
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color:white;
+  align-items: center;
+  overflow-y: hidden;
+
+}
+
+/* Style the header */
+h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+.title{
+
+  color: black;
+}
+/* Style the form */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Style the form inputs */
+input[type="number"],
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the form button */
+.button.is-primary  {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color:orangered;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* //Style the result input */
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+/* Style for the field container */
+.field {
+  margin-bottom: 1.5rem;
+}
+
+/* Style for the label */
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+/* Style for the select element */
+.select select {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid #dbdbdb;
+  font-size: 1rem;
+  font-family: inherit;
+  line-height: 1.5;
+  background-color: #fff;
+}
+
+/* Style for the option elements */
+.select select option {
+  font-size: 1rem;
+  font-family: inherit;
+  color: #363636;
+  background-color: #fff;
+}
+
+.bg-img {
+  background-image: url("assests/img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  background-color:white;
+  /* border: 1px solid #ccc; */
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+  overflow-y: hidden;
+
+}
+
+.container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.container p {
+  font-size: 1rem;
+  margin: 0 0 10px;
+}
+
+.bmi-value {
+  font-weight: bold;
+}
+
+.calorie-value {
+  font-weight: bold;
+  color: green;
+}
+a .h2{
+  font-weight: bold;
+}
