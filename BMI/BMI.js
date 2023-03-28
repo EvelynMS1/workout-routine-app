@@ -12,7 +12,10 @@ var weightCategory;
 var calorie;
 var age;
 var weightType;
-var healthy_bmi_range;
+var healthy_bmi_rangen;
+var protein;
+var carbs;
+var fat;
 var options = {
   method: "GET",
   headers: {
@@ -64,7 +67,7 @@ var getBMI = function (age, weight, height) {
           console.log(bmidata.data.bmi);
           BMI = bmidata.data.bmi;
           weightType = bmidata.data.health;
-          healthy_bmi_range = bmidata.data. healthy_bmi_range;
+          healthy_bmi_range = bmidata.data.healthy_bmi_range;
           return BMI;
         });
       } else {
@@ -107,6 +110,9 @@ var getBMI = function (age, weight, height) {
           return response.json().then((caloriedata) => {
             calorie = caloriedata.data.calorie; 
             console.log(calorie); 
+            protein = caloriedata.data.balanced.protein;
+            fat =caloriedata.data.balanced.fat;
+            carbs=caloriedata.data.balanced.carbs;
             return calorie;
 
           });
@@ -148,9 +154,9 @@ var showWeightDetails = function (BMI, calorie, weightType) {
     box.className = "box";
     column.appendChild(box);
 
-    var title = document.createElement("h3");
+    var title = document.createElement("h2");
     title.className = "title";
-    title.textContent = "Your Results";
+    title.textContent = "Balanced Diet Plan based on BMI and Health";
     box.appendChild(title);
 
     var content = document.createElement("div");
@@ -161,10 +167,6 @@ var showWeightDetails = function (BMI, calorie, weightType) {
     bmiPara.innerHTML = "<strong>BMI:</strong> <span id='bmi'>" + BMI + "</span>";
     content.appendChild(bmiPara);
 
-    var caloriePara = document.createElement("p");
-    caloriePara.innerHTML = "<strong>Calorie Intake:</strong> <span id='calorie'>" + calorie + "</span>";
-    content.appendChild(caloriePara);
-
     var weightTypePara = document.createElement("p");
     weightTypePara.innerHTML = "<strong>Health:</strong> <span id='weightType'>" + weightType + "</span>";
     content.appendChild(weightTypePara);
@@ -172,6 +174,26 @@ var showWeightDetails = function (BMI, calorie, weightType) {
     var BMIRangePara = document.createElement("p");
     BMIRangePara.innerHTML = "<strong>Healthy BMI Range:</strong> <span id='Healthy BMI Range'>" + healthy_bmi_range + "</span>";
     content.appendChild(BMIRangePara);
+
+    var caloriePara = document.createElement("p");
+    caloriePara.innerHTML = "<strong>Calorie Intake:</strong> <span id='calorie'>" + calorie.toFixed(2) + "</span>";
+    content.appendChild(caloriePara);
+
+    var proteinPara = document.createElement("p");
+    proteinPara.innerHTML = "<strong>Protein:</strong> <span id='protein'>" + protein.toFixed(2) + "g</span>";
+    content.appendChild(proteinPara);
+
+    var fatPara = document.createElement("p");
+    fatPara.innerHTML = "<strong>Fat:</strong> <span id='fat'>" + fat.toFixed(2) + "g</span>";
+    content.appendChild(fatPara);
+
+    var carbsPara = document.createElement("p");
+    carbsPara.innerHTML = "<strong>Carbs:</strong> <span id='carbs'>" + carbs.toFixed(2) + "g</span>";
+    content.appendChild(carbsPara);
+
+
+
+
 
     // var img = document.createElement("img");
     // img.src = "./BMI/img.png"; 
