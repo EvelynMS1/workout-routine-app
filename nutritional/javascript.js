@@ -47,13 +47,17 @@ var getUserRecipe = function (userInput) {
 
 //     }
 // }
+var objectpropdata;
 var displayRecipes = function (data) {
-  var objectpropdata = data;
+   objectpropdata = data;
 
   for (var i = 0; i < objectpropdata.hits.length; i++) {
     //creates dynamic button adds a class adds p and img tag
     var storlabelimagebutton = document.createElement ('button');
-
+//     storlabelimagebutton.addEventListener('click',function(){
+//       buttonClicked(objectpropdata)
+//  });
+    
     storlabelimagebutton.classList.add ('stylefordivwithinlabel-recipe');
     storlabelimagebutton.style.width = '180px';
     storlabelimagebutton.style.height = '180px';
@@ -80,23 +84,26 @@ var displayRecipes = function (data) {
     storlabelimagebutton.appendChild (imageRecipe);
     console.log (storlabelimagebutton);
 
-    recipelabel.appendChild (storlabelimagebutton);
-
+    recipelabel.appendChild(storlabelimagebutton);
+    storlabelimagebutton.addEventListener('click',function(){
+       buttonClicked(objectpropdata)
+  });
+// (function(objectpropdata){
+//        // once button is selected the image and paragraph will call the buttonclicked function which will store more info
+//     storlabelimagebutton.addEventListener("click", function(){
+//           buttonClicked(objectpropdata)
+//      })
+//      })(objectpropdata)
+ };
     savebtn (storlabelimagebutton);
 
-    var urlforrecipe = [];
-    urlforrecipe = urlforrecipe.concat (
-      JSON.stringify (objectpropdata.hits[i].recipe.url)
-    );
-
-    //stringifying data
-    digestrecipe = JSON.stringify (objectpropdata.hits[i].recipe.digest);
+   
 
     //objectdata(urlforrecipe,digestrecipe);
-  }
+  
 };
 
-function savebtn (createdBTN) {
+    function savebtn (createdBTN) {
   //save created  btn to an array
   var btnarray = [];
   btnarray = btnarray.push (createdBTN);
@@ -113,16 +120,10 @@ function loopoverbtn (array) {
 // function clickeventonbutton (numberofbtn){
 
 // }
-// (function(objectpropdata){
-//         //once button is selected the image and paragraph will call the buttonclicked function which will store more info
-//     storlabelimagebutton.addEventListener("click", function(){
-//          buttonClicked(objectpropdata)
-//     })
-//     })(objectpropdata)
-// };
+// 
 
 //when each individual button is selected the button , buttonclicked will activate for specific button
-function objectdata (url, digest) {
+function data (url, digest) {
   var objecttostore = {
     urlarray: [],
     //digestarray for loop to get individual parts of the array
@@ -133,10 +134,18 @@ function objectdata (url, digest) {
   objecttostore = objecttostore.digestarray.push (digest);
 }
 
-function extrainfo (data) {
+function buttonClicked (data) {
   // const ingredientlines = objectpropdata.hits[i].recipe.ingredientLines;
   //    objecttostore.digestarray.push(digestrecipe);
   //    objecttostore.urlarray.push(urlforrecipe);
+    var urlforrecipe = [];
+    urlforrecipe = urlforrecipe.concat (
+      JSON.stringify (objectpropdata.hits[i].recipe.url)
+    );
+
+    //stringifying data
+    digestrecipe = JSON.stringify (objectpropdata.hits[i].recipe.digest);
+
   localStorage.setItem (
     'recipedigest',
     JSON.stringify (objecttostore.digestarray)
@@ -159,10 +168,10 @@ function extrainfo (data) {
   divwithStoredDigest.innerHTML = passeddigestarray;
   dayofweekmondiv.appendChild (divwithStoredDigest);
 }
-
-document
-  .getElementById ('weekday-container')
-  .addEventListener ('click', displaypicturesandlabel);
 function displaypicturesandlabel () {
   fetchbtn.addEventListener ('click', inputReciRequest);
 }
+document
+  .getElementById ('weekday-container')
+  .addEventListener ('click', displaypicturesandlabel);
+
