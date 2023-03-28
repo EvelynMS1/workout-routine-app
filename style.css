@@ -1,0 +1,21 @@
+.stylefordivwithinlabel-recipe{
+    display:inline;
+}
+#weekday-container div{
+    margin:5px;
+    display:inline-block;
+    background-color: chartreuse;
+    width:auto;
+
+
+}
+#weekday-container{
+    /* display:flex; */
+    margin:5px;
+    padding:3%;
+    background-color: lightgreen;
+    /* justify-content: space-around; */
+}
+/* #datadisplay{
+    background-color: blueviolet;
+} */
