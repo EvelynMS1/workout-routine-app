@@ -13,7 +13,7 @@ N/A
 
 To provide users with a fitness web app to help create workouts, track progress and stay motivated.
 
-Link to the live site: https://github.com/EvelynMS1/workout-routine-app
+Link to the live site: https://evelynms1.github.io/workout-routine-app/
 
 ![image](https://user-images.githubusercontent.com/123151991/228069945-93910723-bfb0-4ce7-9d60-9122759cb0c2.png)
 ![image](https://user-images.githubusercontent.com/123151991/228069978-7c069a8b-7342-49ec-bf41-d6e0e11bb96b.png)
