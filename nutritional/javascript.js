@@ -1,38 +1,43 @@
 var bodyApiInfo = document.getElementById("boxdisplay");
 var fetchbtn = document.getElementById("fetchNtA");
-var input = document.getElementById("requestedRecipe");
+var input = document.getElementById("requestedFoodItem");
 var mondaydiv = document.getElementById("Weekdisplay");
 var recipediv1 = document.getElementById("recipe-dropdown-selection");
 var recipeimage = document.getElementById("image-recipe");
 var recipelabel = document.getElementById("label-recipe");
 var dayofweekmondiv = document.getElementById("mondaydiv");
-//event when click button is pressed in input field, takes value for it to be passed in fetch url
+
+//Function converting input feild content to lowercase replacing commas
+//Calls getUserRecipe Function
 var inputReciRequest = function (event) {
   event.preventDefault();
   var item = input.value;
   var newitem = item.toLowerCase();
   var commastring = newitem.replace(/\s/g, ",");
   getUserRecipe(commastring);
+  console.log(commastring);
 };
 
-//function that takes userinput parameter string of input request
+//Function that takes the user input as a parameter string for API fetch.
 var getUserRecipe = function (userInput) {
+  console.log(userInput);
   var apiUrl =
-    "https://edamam-recipe-search.p.rapidapi.com/search?q=" + userInput;
+    "https://edamam-recipe-search.p.rapidapi.com/api/recipes/v2?type=public&beta=true&q=" +
+    userInput +
+    "&co2EmissionsClass=A%2B";
   const options = {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "e60181779bmsh462e2f0d660fcb9p1dd608jsnba604de95f99",
+      "X-RapidAPI-Key": "39b0eab361msh1520b77656ade64p1b4290jsn67a3ea8e7d6f",
       "X-RapidAPI-Host": "edamam-recipe-search.p.rapidapi.com",
     },
   };
-  //fetch call declares the displayrecipe that takes data as parameter api response
+  //Fetch call declares function displayRecipes - takes data as parameter (api response)
   fetch(apiUrl, options)
     .then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
-          //objectdata(data);
-          displayRecipes(data); //, userInput);
+          displayRecipes(data);
         });
       } else {
         alert("error" + response.statusText);
@@ -41,16 +46,13 @@ var getUserRecipe = function (userInput) {
     .catch((err) => console.error(err));
 };
 
-// var objectdata = function(data){
-//     var objectpropdata = data;
-//     for(var i=0;i< objectpropdata.hits.length; i++){
-
-//     }
-// }
+//Declaring variable objectpropdata
 var objectpropdata;
+//Function displayRecipes takes data recieved from api fetch as parameter, to then display data
 var displayRecipes = function (data) {
   objectpropdata = data;
-  console.log(objectpropdata);
+  console.log("line 56", objectpropdata);
+  //disecting information for needed parts
   for (var i = 0; i < objectpropdata.hits.length; i++) {
     //creates dynamic button adds a class adds p and img tag
     var storlabelimagebutton = document.createElement("button");
@@ -82,22 +84,14 @@ var displayRecipes = function (data) {
     imageRecipe.style.height = "100px";
 
     storlabelimagebutton.appendChild(imageRecipe);
-    console.log(storlabelimagebutton);
+    console.log("line 89", storlabelimagebutton);
 
     recipelabel.appendChild(storlabelimagebutton);
     storlabelimagebutton.addEventListener("click", function () {
       buttonClicked(recipeObj);
     });
-    // (function(objectpropdata){
-    //        // once button is selected the image and paragraph will call the buttonclicked function which will store more info
-    //     storlabelimagebutton.addEventListener("click", function(){
-    //           buttonClicked(objectpropdata)
-    //      })
-    //      })(objectpropdata)
   }
-  savebtn(storlabelimagebutton);
-
-  //objectdata(urlforrecipe,digestrecipe);
+  // savebtn(storlabelimagebutton);
 };
 
 function savebtn(createdBTN) {
@@ -106,7 +100,7 @@ function savebtn(createdBTN) {
   btnarray = btnarray.push(createdBTN);
   loopoverbtn(btnarray);
 }
-//display info
+//Function looping over array of buttons
 function loopoverbtn(array) {
   for (i = 0; i < array.length; i++) {
     btndiv = document.createElement("div");
@@ -114,12 +108,7 @@ function loopoverbtn(array) {
     document.getElement(recipelabel).appendChild(btndiv);
   }
 }
-// function clickeventonbutton (numberofbtn){
 
-// }
-//
-
-//when each individual button is selected the button , buttonclicked will activate for specific button
 function data(url, digest) {
   var objecttostore = {
     urlarray: [],
@@ -162,9 +151,9 @@ function buttonClicked(data) {
 }
 
 //Event Listeners for Button clicked in search bar, Calls inputReciRequest
-function displaypicturesandlabel() {
+function displayPicturesandlabel() {
   fetchbtn.addEventListener("click", inputReciRequest);
 }
 document
   .getElementById("weekday-container")
-  .addEventListener("click", displaypicturesandlabel);
+  .addEventListener("click", displayPicturesandlabel);
